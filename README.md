@@ -117,8 +117,8 @@ Use the following command to start Portus:
 
 ```
 docker run -d --restart=always --name portus \
- -v /etc/letsencrypt/live/bellatrix.lot209.com/fullchain.pem:/certificates/portus-ca.crt \
- -v /etc/letsencrypt/live/bellatrix.lot209.com/privkey.pem:/secrets/portus.key \
+ -v /etc/letsencrypt/live/your.registry.fqdn/fullchain.pem:/certificates/portus-ca.crt \
+ -v /etc/letsencrypt/live/your.registry.fqdn/privkey.pem:/secrets/portus.key \
  -v /var/lib/registry/portus/config-local.yml:/srv/Portus/config/config-local.yml \
  --link mysql:mysql \
  -e MARIADB_SERVICE_HOST=mysql \
